@@ -30,7 +30,7 @@ main{
 	padding: 1rem 2rem;
 }
 .site-header{
-	padding: 1rem 0;
+	padding: 1em 0 .5em 0;
 }
 .site-header__info{
 	text-align: center;
@@ -41,7 +41,7 @@ main{
 	}
 }
 .site-title{
-	
+
 }
 .site-logo{
 	width: 5rem;
@@ -49,6 +49,7 @@ main{
 .site-menu{
 	list-style: none;
 	padding: 0;
+	margin-bottom: 0;
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-around;
@@ -85,7 +86,6 @@ main{
 	color:	white;
 	padding: 1rem;
 }
-
 
 
 
