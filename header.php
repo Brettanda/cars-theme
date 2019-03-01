@@ -13,7 +13,7 @@
 		$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 		if( has_custom_logo()){
 			print("<a href='"); print get_option('home'); print("'>");	print('<img class="site-logo" src="');	print esc_url($logo[0]);	print('" alt="Site Logo"></a>');
-			print("<h1>"); print("<a href='"); print get_option('home'); print("'>");	 bloginfo('name');	print("</a></h1>");
+			print("<h1 class='site-title'>"); print("<a href='"); print get_option('home'); print("'>");	 bloginfo('name');	print("</a></h1>");
 	//		print("<h2>");	bloginfo('description');	print("</h2></div>");		
 		}else{
 			print("<h1>"); print("<a href='"); print get_option('home'); print("'>");	bloginfo('name');	print("</a></h1>");
