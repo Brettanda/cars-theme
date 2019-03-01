@@ -118,3 +118,22 @@ main{
 	background-color: $grey;
 }
 
+
+
+//Media Queries
+@media all and (max-width: 1000px){
+	main, .site-header{
+		width: 80%;
+	}
+}
+@media all and (max-width: 800px){
+	main, .site-header{
+		width: 90%;
+	}
+}
+@media all and (max-width: 700px){
+	main, .site-header{
+		width: 100%;
+		box-shadow: 0;
+	}
+}
