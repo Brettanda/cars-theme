@@ -79,6 +79,12 @@ main{
 .menu-item-has-children ul{
 	display: none;
 }
+.site-footer{
+	text-align: center;
+	background-color: rgb(50,50,50);
+	color:	white;
+	padding: 1rem;
+}
 
 
 
@@ -111,9 +117,4 @@ main{
 	height: 60vh;
 	background-color: $grey;
 }
-.site-footer{
-	text-align: center;
-	background-color: rgb(50,50,50);
-	color:	white;
-	padding: 1rem;
-}
+
