@@ -149,3 +149,8 @@ main{
 	-ms-transform: $property;
 	transform: $property;
 }
+@mixin break($property) {
+	@media all and (max-width: $property){
+
+	}
+}
