@@ -16,7 +16,7 @@
 			print("<h1 class='site-title'>"); print("<a href='"); print get_option('home'); print("'>");	 bloginfo('name');	print("</a></h1>");
 	//		print("<h2>");	bloginfo('description');	print("</h2></div>");		
 		}else{
-			print("<h1>"); print("<a href='"); print get_option('home'); print("'>");	bloginfo('name');	print("</a></h1>");
+			print("<h1 class='site-title'>"); print("<a href='"); print get_option('home'); print("'>");	bloginfo('name');	print("</a></h1>");
 	//		print("<h2>");	bloginfo('description');	print("</h2></div>");
 		}?>
 	</div>
