@@ -11,6 +11,9 @@ tags: responsive, pets
 $red: rgba(255, 56, 23,0.7);
 $black: rgba(0, 0, 0,0.9);
 
+t-red{
+	color: $red;
+}
 //Site Specific Tags
 *{box-sizing: border-box;}
 body{
