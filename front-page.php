@@ -1,10 +1,12 @@
 <?php get_header(); ?>
+
 <style>
 	
 </style>
 	<div class="slide-show">
 		
 	</div>
+</header>
 <main>
 	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 		<section class="section">

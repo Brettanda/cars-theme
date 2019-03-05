@@ -8,6 +8,7 @@
 </head>
 <body <?php body_class();?> >
 <header class="site-header">
+	<div class="site-header__main">
 	<div class="site-header__info">
 		<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 		$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
@@ -33,4 +34,4 @@
 		));
 	}
 	?>
-</header>
+	</div>
