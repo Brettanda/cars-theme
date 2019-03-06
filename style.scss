@@ -58,9 +58,6 @@ main , .menu-main-container, .site-header__info{
 		box-shadow: 0;
 	}
 }
-#site-header__main{
-	transition: top .3s ease-out;
-}
 h1,h2,h3,h4{
 	font-family: 'Indie Flower', cursive;
 }
@@ -69,17 +66,17 @@ main{
 	padding: 1rem 2rem;
 }
 .site-header{
-	padding: 1em 0 .5em 0;
-	min-height: 90vh;
+	min-height: 130px;
 }
 .site-header__main{
 	width: 100vw;
 	left: 0;
 	top: 0;
 	position: fixed;
-	background-color: rgba($color: $white, $alpha: 1.0);
+	background-color: rgba($color: $white, $alpha: 0.3);
 	z-index: 1;
 	padding-bottom: 11px;
+	transition: background-color .3s ease-out, top .3s ease-out;
 }
 .site-header__info{
 	text-align: center;
@@ -107,7 +104,7 @@ main{
 		text-align: center;
 		width: 80%;
 		max-width: 15rem;
-		height: 2rem;
+		height: 2rem;		
 		& a{
 			text-decoration: none;
 			color: $black;
@@ -121,6 +118,11 @@ main{
 			}
 		}
 	}
+}
+.nav-short{
+	top: -80px;
+	padding-bottom: 5px;
+	background-color: rgba($color: $white, $alpha: 1);
 }
 .current_page_item{
 	border-bottom: .2rem solid $red;
@@ -163,11 +165,19 @@ main{
 
 //front page stuff
 .slide-show{
-	width: 100vw;
-	height: 76vh;
+	width: 100%;
+	height: 90vh;
 	background-color: $black;
 	position: absolute;
 	left: 0;
-	margin-top: 117px;
+	overflow: hidden;
 }
+.slide-show > * {
+	width: 100%;
 
+	@include break(lg){
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
