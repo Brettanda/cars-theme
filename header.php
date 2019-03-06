@@ -4,6 +4,7 @@
 <meta name="theme-color" content="<?php print get_theme_mod("theme_color");?>">
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="//instant.page/1.2.1" type="module" integrity="sha384-/IkE5iZAM/RxPto8B0nvKlMzIyCWtYocF01PbGGp1qElJuxv9J4whdWBRtzZltWn"></script>
 <?php wp_head();?>
 </head>
 <body <?php body_class();?> >
@@ -43,9 +44,9 @@ window.onscroll = function() {scrollfunction()};
 
 function scrollfunction() {
 	var main = document.getElementById("site-header__main");
-    if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
-        main.style.top = "-80px";
+    if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+	main.classList.add("nav-short");
     } else {
-        main.style.top = "0";
+	main.classList.remove("nav-short");
     }
 }</script>
