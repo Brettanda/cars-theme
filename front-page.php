@@ -1,10 +1,12 @@
 <?php get_header(); ?>
 
 <style>
-	
+.site-header{
+	min-height: 90vh;
+}	
 </style>
 	<div class="slide-show">
-		
+		<img src="http://lorempixel.com/1920/1080/cats"/>
 	</div>
 </header>
 <main>
