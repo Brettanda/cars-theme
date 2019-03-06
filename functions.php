@@ -11,7 +11,7 @@ add_theme_support( 'custom-logo' );
 function linked_assets(){
 	wp_enqueue_style('theme_styles', get_stylesheet_uri('style.scss'));
 	wp_enqueue_script('theme_script', get_stylesheet_uri('scripts/scripts.js'));
-	wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css?family=Indie+Flower|Muli:400,600');
+	wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css?family=Muli:300,400,600|Open+Sans:300,400');
 }
 add_action('wp_enqueue_scripts','linked_assets');
 
