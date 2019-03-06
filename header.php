@@ -16,10 +16,10 @@
 			$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 			if( has_custom_logo()){
 				print("<a href='"); print get_option('home'); print("'>");	print('<img class="site-logo" src="');	print esc_url($logo[0]);	print('" alt="Site Logo"></a>');
-				print("<h1 class='site-title'>"); print("<a href='"); print get_option('home'); print("'>");	 bloginfo('name');	print("</a></h1>");
+				print("<h1 id='site-title' class='site-title'>"); print("<a href='"); print get_option('home'); print("'>");	 bloginfo('name');	print("</a></h1>");
 		//		print("<h2>");	bloginfo('description');	print("</h2></div>");		
 			}else{
-				print("<h1 class='site-title'>"); print("<a href='"); print get_option('home'); print("'>");	bloginfo('name');	print("</a></h1>");
+				print("<h1 id='site-title' class='site-title'>"); print("<a href='"); print get_option('home'); print("'>");	bloginfo('name');	print("</a></h1>");
 		//		print("<h2>");	bloginfo('description');	print("</h2></div>");
 			}?>
 		</div>
@@ -45,9 +45,20 @@ window.onscroll = function() {scrollfunction()};
 
 function scrollfunction() {
 	var main = document.getElementById("site-header__main");
+	var title = document.getElementById("site-title");
     if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
 	main.classList.add("nav-short");
+	title.classList.add("responsive");
     } else {
 	main.classList.remove("nav-short");
-    }
-}</script>
+	title.classList.remove("responsive");
+	}
+}
+anime({
+	targets: 'div',
+	translateX: 250,
+	backgroundColor: '#FFF',
+	duration: 1000,
+	delay: anime.stagger(200)
+});
+</script>

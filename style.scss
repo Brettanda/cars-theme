@@ -46,14 +46,14 @@ main , .menu-main-container, .site-header__info{
 	max-width: 1200px;
 	margin: 0 auto;
 
-	@include break(md) {
+	@include break(lg) {
 		width: 80%;
 	}
 
-	@include break(sm){
+	@include break(md){
 		width: 90%;
 	}
-	@include break(xs){
+	@include break(sm){
 		width:100%;
 		box-shadow: 0;
 	}
@@ -89,6 +89,10 @@ main{
 
 .site-title{
 	text-shadow: #ffffff 3px 3px 0px, rgba(0, 0, 0, 0.2) 6px 6px 0px;
+
+	&.responsive{
+		
+	}
 }
 .site-logo{
 	width: 5rem;
@@ -109,7 +113,7 @@ main{
 			text-decoration: none;
 			color: $black;
 			transition: .5s;
-			padding: 1rem 2rem;
+			// padding: 1rem 2rem;
 			width: 10rem;
 			
 			&:hover{
@@ -120,7 +124,7 @@ main{
 	}
 }
 .nav-short{
-	top: -80px;
+	top: -4.5rem;
 	padding-bottom: 5px;
 	background-color: rgba($color: $white, $alpha: 1);
 }
@@ -173,7 +177,10 @@ main{
 	overflow: hidden;
 }
 .slide-show > * {
-	width: 100%;
+	width: 1px;
+	height: auto;
+	min-width: 100%;
+	min-height: 100%;
 
 	@include break(lg){
 		height: 100%;
