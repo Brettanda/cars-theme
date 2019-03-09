@@ -9,7 +9,7 @@ tags: responsive, pets
 
 
 //variables
-$red: rgba(255, 56, 23,0.7);
+$red: rgba(206, 14, 45,1);
 $black: rgba(0, 0, 0,0.9);
 $white: rgb(255,255,255);
 
@@ -35,7 +35,7 @@ $breakpoints: (
 
 
 //Site Specific Tags
-*{box-sizing: border-box;}
+//*{box-sizing: border-box;}
 body{
 	font-family: 'Muli', sans-serif;
 	margin: 0;
@@ -124,9 +124,9 @@ main{
 	}
 }
 .nav-short{
-	top: -4.5rem;
-	padding-bottom: 5px;
-	background-color: rgba($color: $white, $alpha: 1);
+//	top: -4.5em;
+//	padding-bottom: 5px;
+//	background-color: rgba($color: $white, $alpha: 1);
 }
 .current_page_item{
 	border-bottom: .2rem solid $red;
@@ -164,7 +164,27 @@ main{
 
 }
 
+//Donate Button
+.donate{
+	background-color: rgba(50,150,50,0.9);
+	padding: 10px;
+	position: fixed;
+	width: 50px;
+	height: 30px;
+	top: 30vh;
+	right: -.8vw;
+	border-top-right-radius: 1rem;
+	border-top-left-radius: 1rem;
+	transform: rotate(-90deg);
 
+	& button{
+		border: 0;
+		background: 0;
+		outline: 0;
+		
+	}
+	
+}
 
 
 //front page stuff

@@ -5,7 +5,7 @@
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="//instant.page/1.2.1" type="module" integrity="sha384-/IkE5iZAM/RxPto8B0nvKlMzIyCWtYocF01PbGGp1qElJuxv9J4whdWBRtzZltWn"></script>
-<!-- <script src="anime-master/lib/anime.min.js"></script> -->
+<script src="wp-content/themes/cars/anime-master/lib/anime.min.js"></script>
 <?php wp_head();?>
 </head>
 <body <?php body_class();?> >
@@ -49,16 +49,26 @@ function scrollfunction() {
     if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
 	main.classList.add("nav-short");
 	title.classList.add("responsive");
+	anime({
+		targets: '.nav-short',
+		top: '-4.5em',
+		background: '#fff',
+		paddingBottom: '5px',
+		duration: 250,
+		easing: 'linear'
+	});
     } else {
-	main.classList.remove("nav-short");
-	title.classList.remove("responsive");
+	anime({
+		targets: '.nav-short',
+		top: '0',
+		background: 'rgba(255,255,255,0.3)',
+		duration: 250,
+		easing: 'linear',
+		complete: function () {
+			main.classList.remove("nav-short");
+			title.classList.remove("responsive");
+		}
+	});
 	}
 }
-anime({
-	targets: 'div',
-	translateX: 250,
-	backgroundColor: '#FFF',
-	duration: 1000,
-	delay: anime.stagger(200)
-});
 </script>
