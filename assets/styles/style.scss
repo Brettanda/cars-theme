@@ -60,6 +60,9 @@ main , .menu-main-container, .site-header__info{
 		box-shadow: 0;
 	}
 }
+.site-header{
+	height: 12rem;
+}
 .menu-main-container{
 	@include break(sm){
 		display: none;

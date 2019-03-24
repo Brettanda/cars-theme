@@ -38,6 +38,10 @@ main, .menu-main-container, .site-header__info {
   }
 }
 
+.site-header {
+  height: 12rem;
+}
+
 @media screen and (max-width: 800px) {
   .menu-main-container {
     display: none;
