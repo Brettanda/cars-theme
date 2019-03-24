@@ -5,7 +5,7 @@
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="//instant.page/1.2.1" type="module" integrity="sha384-/IkE5iZAM/RxPto8B0nvKlMzIyCWtYocF01PbGGp1qElJuxv9J4whdWBRtzZltWn"></script>
-<script src="wp-content/themes/cars/anime-master/lib/anime.min.js"></script>
+<!-- <script src="wp-content/themes/cars/anime-master/lib/anime.min.js"></script> -->
 <?php wp_head();?>
 </head>
 <body <?php body_class();?> >
@@ -173,3 +173,4 @@ menu.addEventListener("click", function(){
 	}
 })
 </script>
+<div class="main">

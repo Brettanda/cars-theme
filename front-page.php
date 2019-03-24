@@ -9,6 +9,7 @@
 		<img src="http://lorempixel.com/1920/1080/cats"/>
 	</div>
 </header>
+<div class="main">
 <main>
 	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 		<section class="section">
