@@ -27,15 +27,6 @@ $breakpoints: (
 @import 'mixins/transform';
 
 
-//Mixins
-
-@mixin transform($property) {
-	-webkit-transform: $property;
-	-ms-transform: $property;
-	transform: $property;
-}
-
-
 //Site Specific Tags
 *{box-sizing: border-box;}
 body{
@@ -235,7 +226,7 @@ main{
 		height: 100%;
 		width: 3rem;
 		left: calc(100% - 1rem);
-		transform: translatey(-70%);
+		@include transform(translatey(-70%));
 		z-index: -1;
 		position: absolute;
 	}
@@ -255,7 +246,7 @@ main{
 	right: -17px;
 	border-top-right-radius: 1rem;
 	border-top-left-radius: 1rem;
-	transform: rotate(-90deg);
+	@include transform(rotate(-90deg));
 
 	& button{
 		border: 0;
@@ -300,7 +291,7 @@ main{
 	height: 69px;
 	display: none;
 	margin: 0 auto;
-	transform: translateY(1rem);
+	@include transform(translateY(1rem));
 
 
 	@include break(sm){
@@ -309,14 +300,14 @@ main{
 	}
 }
 .bar-labels{
-	transform: translateX(-60px) translateY(-4px);
+	@include transform(translateX(-60px) translateY(-4px));
 }
 .bar{
 	width: 40px;
 	height: 3px;
 	background: black;
 	margin: 11px 5px;
-	transform: translateY(-6.8rem);
+	@include transform(translateY(-6.8rem));
 }
 .bar-menu__label{
 
@@ -325,7 +316,7 @@ main{
 	opacity: 0;
 }
 .menu-btn{
-	transform: translateY(-1rem);
+	@include transform(translateY(-1rem));
 }
 
 @include break(sm) {
@@ -383,7 +374,7 @@ main{
 	background-color: #EEE;
 
 	&:hover{
-		transform: scale(1.05);
+		@include transform(scale(1.05));
 		box-shadow: 0 0 30px rgba(16,14,23,.25);
 	}
 }
