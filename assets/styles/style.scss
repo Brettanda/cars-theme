@@ -1,15 +1,16 @@
 /*
-Theme Name: Calgary Animal Rescue Theme
-Author: Brett Anda
-Author URI: http://brettanda.ca/about-me
-Description: Theme for the cars website
-Version: 1.0.0
-tags: responsive, pets
+Theme Name: Calgary Animal Rescue 
+Theme Author: Brett Anda 
+Author URI: http://brettanda.ca/about-me 
+Description: Theme for the cars website 
+Version: 1.0.0 
+tags: responsive, pets 
 */
 
 
 //variables
 $red: rgba(206, 14, 45,1);
+$dark-red: rgba(180,14,45,1);
 $black: rgba(0, 0, 0,0.9);
 $white: rgb(255,255,255);
 
@@ -19,10 +20,11 @@ $breakpoints: (
 	'sm': 800px,
 	'md': 1000px,
 	'lg': 1200px,
-	'xl': 1500px
+	'xl': 1500px,
 ) !default;
 
-@import 'styles/mixins/_break';
+@import 'mixins/break';
+@import 'mixins/transform';
 
 
 //Mixins
@@ -66,9 +68,42 @@ main , .menu-main-container, .site-header__info{
 h1,h2,h3,h4{
 	font-family: 'Open Sans', sans-serif;
 }
+a{
+	color: $red;
+	transition: color .3s;
+
+	&:hover{
+		color: $black;
+	}
+}
+.main{
+	min-height: 34rem;
+	display: grid;
+	grid-template-columns: 55% 25%;
+	justify-content: center;
+
+	@include break(xl){
+		grid-template-columns: 60% 30%;
+	}
+	
+	@include break(lg){
+		grid-template-columns:65% 35%;
+	}
+
+	@include break(md){
+		grid-template-columns: unset;
+		grid-auto-flow: row;
+		box-shadow: 0;
+	}
+}
 main{
-	box-shadow: 0 .1rem .2rem .1rem rgba(0,0,0,0.2);
+	box-shadow: 0 0 30px rgba(16,14,23,.25);
 	padding: 1rem 2rem;
+	width: 100%;
+	
+	@include break(md) {
+		left:unset;
+	}	
 }
 .site-header{
 	min-height: 130px;
@@ -85,7 +120,14 @@ main{
 }
 .site-header__info{
 	text-align: center;
-	
+	display: flex;
+	justify-content: center;	
+
+
+	@include break(xs) {
+		flex-direction: column;
+	}
+
 	& a{
 		text-decoration: none;
 		color: $black;
@@ -94,13 +136,18 @@ main{
 
 .site-title{
 	text-shadow: #ffffff 3px 3px 0px, rgba(0, 0, 0, 0.2) 6px 6px 0px;
+	align-self: center;
+
+	@include break(xs) {
+		margin-top: 0;
+	}
 
 	&.responsive{
 		
 	}
 }
 .site-logo{
-	width: 5rem;
+	width: 10rem;
 }
 .site-menu{
 	list-style: none;
@@ -141,6 +188,14 @@ main{
 .menu-item-has-children ul{
 	display: none;
 }
+.menu-item-has-children:hover ul{
+	display: block;
+	list-style: none;
+	background-color: $white;
+	border: 2px solid $red;
+	padding-top: 1rem;
+	maring-top: 1rem;
+}
 .site-footer{
 	text-align: center;
 	background-color: $black;
@@ -148,7 +203,12 @@ main{
 	padding: 1rem;
 }
 
-
+//Footer Sidebar
+.sidebar-footer{
+	list-style: none;
+	justify-content: space-evenly;
+	display: flex;
+}
 
 
 //Page Section Tags
@@ -157,13 +217,25 @@ main{
 
 }
 .section-header{
-	background-color: $black;
+	background-color: $red;
 	color: white;
 	position: relative;
 	left: -2rem;
 }
 .section-header__title{
 	padding: .5rem 0 .5rem 2rem;
+
+	&::after{
+		display: block;
+		content: '';
+		background-color: $dark-red;
+		height: 100%;
+		width: 3rem;
+		left: calc(100% - 1rem);
+		transform: translatey(-70%);
+		z-index: -1;
+		position: absolute;
+	}
 }
 .section-content{
 
@@ -202,14 +274,15 @@ main{
 	overflow: hidden;
 }
 .slide-show > * {
-	width: 1px;
 	height: auto;
 	min-width: 100%;
 	min-height: 100%;
+	max-width: 110%;
+	object-fit: cover;
+	position: absolute;
 
 	@include break(lg){
 		height: 100%;
-		object-fit: cover;
 		object-position: center;
 	}
 }
@@ -223,9 +296,13 @@ main{
 	padding: 10px 10px 10px 60px;
 	height: 69px;
 	display: none;
+	margin: 0 auto;
+	transform: translateY(1rem);
+
 
 	@include break(sm){
 		display: block;
+		height: 3rem;
 	}
 }
 .bar-labels{
@@ -233,17 +310,77 @@ main{
 }
 .bar{
 	width: 40px;
-	height: 5px;
+	height: 3px;
 	background: black;
-	margin: 9px 5px;
-	transform: translateY(-96px);
+	margin: 11px 5px;
+	transform: translateY(-6.8rem);
 }
-.mar-menu__label{
-	display: inline-block;
-	float: left;
-	position: absolute;
-	left: 0;
+.bar-menu__label{
+
 }
 .close-btn{
 	opacity: 0;
+}
+.menu-btn{
+	transform: translateY(-1rem);
+}
+
+@include break(sm) {
+	.mobile-menu{
+		display: block;
+		overflow: hidden;
+		padding-top: 3rem;
+	
+		& .site-menu{
+			flex-direction: column;
+			text-align: center;
+			text-align: -webkit-center;
+	
+			& li{
+				padding: 2rem;
+			}
+		}
+	}
+}
+
+//Right Side Bar
+.right-sidebar{
+	background-color: $black;
+	color: $white;
+	box-shadow: 0 0 30px rgba(16,14,23,.25);
+	margin: 1rem;
+	max-height: 50rem;
+	max-width: 30rem;
+	list-style: none;
+
+	@include break(md){
+		margin: 0;
+		margin-bottom: 1rem;
+		max-width: unset;
+		box-shadow: 0;
+	}
+}
+
+
+// The upcoming events
+
+.events{
+	display: flex;	
+	justify-content: space-around;
+}
+.event{
+	width: 20rem;
+	height: 20rem;
+	padding: 1rem;
+	margin: 1rem;
+	border-radius: 5px;
+	text-decoration: none;
+	color: $black;
+	transition: transform .3s, box-shadow .3s;
+	background-color: #EEE;
+
+	&:hover{
+		transform: scale(1.05);
+		box-shadow: 0 0 30px rgba(16,14,23,.25);
+	}
 }
