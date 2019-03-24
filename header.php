@@ -24,6 +24,15 @@
 			}?>
 		</div>
 	<!--	<img class="site-img" src="" alt="">-->
+		<button class="bar-menu">
+			<div class="bar-labels">
+				<h2 class="bar-menu__label menu-btn">Menu</h2>
+				<h2 class="bar-menu__label close-btn">Close</h2>
+			</div>
+			<div class="bar bar-1"></div>
+			<div class="bar bar-2"></div>
+			<div class="bar bar-3"></div>
+		</button>
 		<?php
 		if(has_nav_menu('site-menu')){
 			wp_nav_menu(array(
@@ -71,4 +80,96 @@ function scrollfunction() {
 	});
 	}
 }
+
+
+
+const menu = document.querySelector(".bar-menu");
+menu.addEventListener("click", function(){
+	if(menu.classList.contains('is-active')){
+		anime({
+			targets: '.bar-1',
+			translateY: '-96',
+			rotate: '0',
+			duration: 600,
+			complete: function() {
+				menu.classList.remove('is-active');
+			}
+		});
+		anime({
+			targets: '.bar-2',
+			opacity: [0,1],
+			duration: 600,
+			complete: function() {
+				menu.classList.remove('is-active');
+			}
+		});
+		anime({
+			targets: '.bar-3',
+			translateY: '-96',
+			rotate: '0',
+			duration: 600,
+			complete: function() {
+				menu.classList.remove('is-active');
+			}
+		});
+		anime({
+			targets: '.close-btn',
+			translateX: [0,50],
+			translateY: [-44,-44],
+			opacity: [1,0],
+			duration: 500,
+			easing: 'easeOutSine',
+			complete: function() {
+				menu.classList.remove('is-active');
+			}
+		});
+		anime({
+			targets: '.menu-btn',
+			translateX: [-50,0],
+			opacity: [0,1],
+			duration: 500,
+			delay: 100,
+			easing: 'easeOutSine',
+			complete: function() {
+				menu.classList.remove('is-active');
+			}
+		});
+
+	} else {
+		menu.classList.add('is-active');
+		anime({
+			targets: '.bar-1',
+			translateY: '14px',
+			rotate: '45deg',
+			duration: 600
+		});
+		anime({
+			targets: '.bar-2',
+			opacity: 0,
+			duration: 600
+		});
+		anime({
+			targets: '.bar-3',
+			translateY: '-14px',
+			rotate: '-45deg',
+			duration: 600
+		});
+		anime({
+			targets: '.close-btn',
+			translateX: [-50,0],
+			translateY: [-44,-44],
+			opacity: [0,1],
+			delay: 100,
+			easing: 'easeOutSine',
+			duration: 500
+		});
+		anime({
+			targets: '.menu-btn',
+			translateX: [0,50],
+			opacity: [1,0],
+			easing: 'easeOutSine',
+			duration: 500
+		});
+	}
+})
 </script>

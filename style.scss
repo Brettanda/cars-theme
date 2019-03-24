@@ -35,7 +35,7 @@ $breakpoints: (
 
 
 //Site Specific Tags
-//*{box-sizing: border-box;}
+*{box-sizing: border-box;}
 body{
 	font-family: 'Muli', sans-serif;
 	margin: 0;
@@ -56,6 +56,11 @@ main , .menu-main-container, .site-header__info{
 	@include break(sm){
 		width:100%;
 		box-shadow: 0;
+	}
+}
+.menu-main-container{
+	@include break(sm){
+		display: none;
 	}
 }
 h1,h2,h3,h4{
@@ -169,10 +174,10 @@ main{
 	background-color: rgba(50,150,50,0.9);
 	padding: 10px;
 	position: fixed;
-	width: 50px;
-	height: 30px;
+	width: 75px;
+	height: 40px;
 	top: 30vh;
-	right: -.8vw;
+	right: -17px;
 	border-top-right-radius: 1rem;
 	border-top-left-radius: 1rem;
 	transform: rotate(-90deg);
@@ -207,4 +212,38 @@ main{
 		object-fit: cover;
 		object-position: center;
 	}
+}
+
+
+//Mobile Menu
+.bar-menu{
+	border:0;
+	outline:0;
+	background:0;
+	padding: 10px 10px 10px 60px;
+	height: 69px;
+	display: none;
+
+	@include break(sm){
+		display: block;
+	}
+}
+.bar-labels{
+	transform: translateX(-60px) translateY(-4px);
+}
+.bar{
+	width: 40px;
+	height: 5px;
+	background: black;
+	margin: 9px 5px;
+	transform: translateY(-96px);
+}
+.mar-menu__label{
+	display: inline-block;
+	float: left;
+	position: absolute;
+	left: 0;
+}
+.close-btn{
+	opacity: 0;
 }
