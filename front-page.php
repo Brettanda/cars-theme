@@ -1,14 +1,16 @@
 <?php get_header(); ?>
 
 <style>
-.site-header{
-	min-height: 90vh;
-}	
+
 </style>
 	<div class="slide-show">
-		<img src="http://lorempixel.com/1920/1080/cats"/>
+		<img class="slide-show__img" src="http://pi.brettanda.ca/cars/wordpress/wp-content/uploads/2019/03/CAR-Pic-1.jpg"/>
+		<img class="slide-show__img" src="http://pi.brettanda.ca/cars/wordpress/wp-content/uploads/2019/03/CAR-pic-2.jpg"/>
+		<img class="slide-show__img" src="http://pi.brettanda.ca/cars/wordpress/wp-content/uploads/2019/03/DSC_1552-5-1.jpg"/>
+		<img class="slide-show__img" src="http://pi.brettanda.ca/cars/wordpress/wp-content/uploads/2019/03/C1.jpg"/>
 	</div>
 </header>
+<script>slideshow();</script>
 <div class="main">
 <main>
 	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
