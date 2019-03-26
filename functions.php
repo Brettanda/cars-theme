@@ -12,7 +12,7 @@ function linked_assets(){
 	
 	wp_enqueue_style('theme_styles', get_stylesheet_uri('style.css'));
 	wp_enqueue_script('theme_script', get_stylesheet_directory_uri() . '/assets/scripts/scripts.js');
-	wp_enqueue_script('animejs', get_stylesheet_directory_uri() . '/node_modules/anime-master/lib/anime.min.js');
+	wp_enqueue_script('animejs', get_stylesheet_directory_uri() . '/node_modules/animejs/lib/anime.min.js');
 	wp_enqueue_script('rellax', get_stylesheet_directory_uri() . '/node_modules/rellax/rellax.min.js');
 	wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css?family=Muli:300,400,600|Open+Sans:300,400');
 }
