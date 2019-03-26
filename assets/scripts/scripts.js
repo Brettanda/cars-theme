@@ -4,10 +4,10 @@ function scrollfunction() {
 	var main = document.getElementById("site-header__main");
 	var title = document.getElementById("site-title");
     if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-	main.classList.add("nav-short");
+	// main.classList.add("nav-short");
 	title.classList.add("responsive");
 	anime({
-		targets: '.nav-short',
+		targets: main,
 		top: '-7.5rem',
 		background: '#fff',
 		paddingBottom: '5px',
@@ -15,37 +15,37 @@ function scrollfunction() {
 		easing: 'linear'
 	});
     } else {
-	if(!document.querySelector('#wpadminbar')){
-		anime({
-			targets: '.nav-short',
-			top: '0',
-			background: 'rgba(255,255,255,0.3)',
-			duration: 250,
-			easing: 'easeOutSine',
-			complete: function () {
-				main.classList.remove("nav-short");
-				title.classList.remove("responsive");
-			}
-		});
-	} else {
-		anime({
-			targets: '.nav-short',
-			top: '2rem',
-			background: 'rgba(255,255,255,0.3)',
-			easing: 'easeOutSine',
-			duration: 250,
-			complete: function () {
-				main.classList.remove("nav-short");
-				title.classList.remove("responsive");
-			}
-		});
-	}
+		if(!document.querySelector('#wpadminbar')){
+			anime({
+				targets: main,
+				top: '0',
+				background: 'rgba(255,255,255,0.3)',
+				duration: 250,
+				easing: 'easeOutSine',
+				loopComplete: function () {
+					main.classList.remove("nav-short");
+					title.classList.remove("responsive");
+				}
+			});
+		} else {
+			anime({
+				targets: main,
+				top: '2rem',
+				background: 'rgba(255,255,255,0.3)',
+				easing: 'easeOutSine',
+				duration: 250,
+				loopComplete: function () {
+					main.classList.remove("nav-short");
+					title.classList.remove("responsive");
+				}
+			});
+		}
     }
 }
 
 
 
-const menu = document.querySelector(".bar-menu");
+let menu = document.querySelector(".bar-menu");
 // menu.addEventListener("click", function(){
 // 	if(menu.classList.contains('is-active')){
 // 		anime({
@@ -175,20 +175,19 @@ function slideshow() {
         
         for(i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
-        }                                                                                                                                                                                      
+        }
         slideIndex++;
         nextSlide = slideIndex + 1;
         
         if(slideIndex > slides.length) {
                 slideIndex = 1;
-        }                                                                                                                                                                                      
+        }
         if(nextSlide > slides.length) {
                 nextSlide = 1;
-        }                                                                                                                                                                                      
+        }
         if(slideIndex == 1) {
                 nextSlide = 2;
-        }                                                                                                                                                                                      
-		console.log(slides[slideIndex]);
+        }
         slides[slideIndex-1].style.display = 'block';
         slides[nextSlide-1].style.display = 'block';
         
