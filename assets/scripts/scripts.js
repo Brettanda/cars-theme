@@ -22,10 +22,10 @@ function scrollfunction() {
 				background: 'rgba(255,255,255,0.3)',
 				duration: 250,
 				easing: 'easeOutSine',
-				loopComplete: function () {
-					main.classList.remove("nav-short");
-					title.classList.remove("responsive");
-				}
+				// loopComplete: function () {
+				// 	main.classList.remove("nav-short");
+				// 	title.classList.remove("responsive");
+				// }
 			});
 		} else {
 			anime({
@@ -34,10 +34,10 @@ function scrollfunction() {
 				background: 'rgba(255,255,255,0.3)',
 				easing: 'easeOutSine',
 				duration: 250,
-				loopComplete: function () {
-					main.classList.remove("nav-short");
-					title.classList.remove("responsive");
-				}
+				// loopComplete: function () {
+				// 	main.classList.remove("nav-short");
+				// 	title.classList.remove("responsive");
+				// }
 			});
 		}
     }
