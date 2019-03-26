@@ -4,6 +4,8 @@
 <meta name="theme-color" content="<?php print get_theme_mod("theme_color");?>">
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="<?php print get_stylesheet_directory_uri(); ?>/node_modules/animejs/lib/anime.min.js"></script>
+<script src="<?php print get_stylesheet_directory_uri(); ?>/node_modules/rellax/rellax.js"></script>
 <?php wp_head();?>
 </head>
 <body <?php body_class();?> >
