@@ -4,7 +4,6 @@
 <meta name="theme-color" content="<?php print get_theme_mod("theme_color");?>">
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
 <?php wp_head();?>
 </head>
 <body <?php body_class();?> >

@@ -1,6 +1,3 @@
-const rellax = require('rellax');
-const impanime = require('animejs/lib/anime.min.js');
-
 window.onscroll = function() {scrollfunction()};
 
 function scrollfunction() {
