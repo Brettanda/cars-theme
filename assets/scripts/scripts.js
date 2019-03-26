@@ -1,3 +1,6 @@
+const rellax = require('rellax');
+const impanime = require('animejs/lib/anime.min.js');
+
 window.onscroll = function() {scrollfunction()};
 
 function scrollfunction() {
@@ -195,16 +198,16 @@ function slideshow() {
                 targets: slides[slideIndex-1],
                 easing: 'easeOutSine',
                 translateX: [0,'-100%'],
-                duration: 800
+                duration: 1000
         });
         anime({
                 targets: slides[nextSlide-1],
                 easing: 'easeOutSine',
                 translateX: ['100%',0],
-                duration: 800
+                duration: 1000
         });
         
-        setTimeout(slideshow,4000);
+        setTimeout(slideshow,6000);
 } 
 
 //if the wp admin bar is there move the navigation down to fit
@@ -226,3 +229,5 @@ for(var i = 0; i < button.length; i++){
 		});
 	});
 }
+
+// var rellax = new Rellax('.rellax');
