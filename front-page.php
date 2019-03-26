@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 
 <style>
-
+	.site-header{
+		min-height: 90vh;
+	}
 </style>
 	<div class="slide-show">
 		<img class="slide-show__img" src="http://pi.brettanda.ca/cars/wordpress/wp-content/uploads/2019/03/CAR-Pic-1.jpg"/>
