@@ -1,0 +1,16 @@
+{
+    "name": "cars",
+    "version": "1.0.0",
+    "homepage": "https://brettanda.ca",
+    "repository": "brettanda/cars",
+    "description": "School project for a non-profit organization",
+    "author": "Brett Anda <brettanda12@gmail.com>",
+    "scripts": {
+        "start": "sass --watch assets/styles/style.scss:style.css"
+    },
+    "dependencies": {
+        "animejs": "^3.0.1",
+        "normalize.css": "^8.0.0",
+        "rellax": "^1.9.0"
+    }
+}
