@@ -11,12 +11,14 @@
   "scripts": {
     "start": "sass --watch assets/styles/style.scss:style.css"
   },
+  "devDependencies": {
+    "sass": "^1.17.3"
+  },
   "dependencies": {
     "animejs": "^3.0.1",
     "instant.page": "^1.2.2",
     "normalize.css": "^8.0.0",
-    "rellax": "^1.9.0",
-    "sass": "^1.17.3"
+    "rellax": "^1.9.0"
   },
   "bugs": {
     "url": "https://github.com/brettanda/cars/issues"
