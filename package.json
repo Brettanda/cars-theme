@@ -23,6 +23,5 @@
   "bugs": {
     "url": "https://github.com/brettanda/cars/issues"
   },
-  "main": "index.js",
   "license": "ISC"
 }
