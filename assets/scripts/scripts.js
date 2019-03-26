@@ -46,114 +46,115 @@ function scrollfunction() {
 
 
 const menu = document.querySelector(".bar-menu");
-menu.addEventListener("click", function(){
-	if(menu.classList.contains('is-active')){
-		anime({
-			targets: '.bar-1',
-			translateY: '-6.8rem',
-			rotate: '0',
-			duration: 600,
-			complete: function() {
-				menu.classList.remove('is-active');
-			}
-		});
-		anime({
-			targets: '.bar-2',
-			opacity: [0,1],
-			duration: 600,
-			complete: function() {
-				menu.classList.remove('is-active');
-			}
-		});
-		anime({
-			targets: '.bar-3',
-			translateY: '-6.8rem',
-			rotate: '0',
-			duration: 600,
-			complete: function() {
-				menu.classList.remove('is-active');
-			}
-		});
-		anime({
-			targets: '.close-btn',
-			translateX: [0,50],
-			translateY: ['-3.7rem','-3.7rem'],
-			opacity: [1,0],
-			duration: 500,
-			easing: 'easeOutSine',
-			complete: function() {
-				menu.classList.remove('is-active');
-			}
-		});
-		anime({
-			targets: '.menu-btn',
-			translateX: [-50,0],
-			translateY: ['-1rem','-1rem'],
-			opacity: [0,1],
-			duration: 500,
-			delay: 100,
-			easing: 'easeOutSine',
-			complete: function() {
-				menu.classList.remove('is-active');
-			}
-		});
-		anime({
-			targets: '.menu-main-container',
-			height: [findHeight(document.querySelector('.menu-main-container').querySelector('.site-menu')),'0'],
-			duration: 500,
-			easing: 'easeOutSine',
-			complete: function() {
-				document.querySelector('.menu-main-container').classList.remove('mobile-menu');
-				document.querySelector('.menu-main-container').style.height = null;
-			}
-		});
+// menu.addEventListener("click", function(){
+// 	if(menu.classList.contains('is-active')){
+// 		anime({
+// 			targets: '.bar-1',
+// 			translateY: '-6.8rem',
+// 			rotate: '0',
+// 			duration: 600,
+// 			complete: function() {
+// 				menu.classList.remove('is-active');
+// 			}
+// 		});
+// 		anime({
+// 			targets: '.bar-2',
+// 			opacity: [0,1],
+// 			duration: 600,
+// 			complete: function() {
+// 				menu.classList.remove('is-active');
+// 			}
+// 		});
+// 		anime({
+// 			targets: '.bar-3',
+// 			translateY: '-6.8rem',
+// 			rotate: '0',
+// 			duration: 600,
+// 			complete: function() {
+// 				menu.classList.remove('is-active');
+// 			}
+// 		});
+// 		anime({
+// 			targets: '.close-btn',
+// 			translateX: [0,50],
+// 			translateY: ['-3.7rem','-3.7rem'],
+// 			opacity: [1,0],
+// 			duration: 500,
+// 			easing: 'easeOutSine',
+// 			complete: function() {
+// 				menu.classList.remove('is-active');
+// 			}
+// 		});
+// 		anime({
+// 			targets: '.menu-btn',
+// 			translateX: [-50,0],
+// 			translateY: ['-1rem','-1rem'],
+// 			opacity: [0,1],
+// 			duration: 500,
+// 			delay: 100,
+// 			easing: 'easeOutSine',
+// 			complete: function() {
+// 				menu.classList.remove('is-active');
+// 			}
+// 		});
+// 		anime({
+// 			targets: '.menu-main-container',
+// 			height: [findHeight(document.querySelector('.menu-main-container').querySelector('.site-menu')),'0'],
+// 			duration: 500,
+// 			easing: 'easeOutSine',
+// 			complete: function() {
+// 				document.querySelector('.menu-main-container').classList.remove('mobile-menu');
+// 				document.querySelector('.menu-main-container').style.height = null;
+// 			}
+// 		});
 
-	} else {
-		menu.classList.add('is-active');
-		anime({
-			targets: '.bar-1',
-			translateY: ['-6.8rem','-5.75rem'],
-			rotate: '45deg',
-			duration: 600
-		});
-		anime({
-			targets: '.bar-2',
-			opacity: 0,
-			duration: 600
-		});
-		anime({
-			targets: '.bar-3',
-			translateY: ['-6.8rem','-7.5rem'],
-			rotate: '-45deg',
-			duration: 600
-		});
-		anime({
-			targets: '.close-btn',
-			translateX: [-50,0],
-			translateY: ['-3.7rem','-3.7rem'],
-			opacity: [0,1],
-			delay: 100,
-			easing: 'easeOutSine',
-			duration: 500
-		});
-		anime({
-			targets: '.menu-btn',
-			translateX: [0,50],
-			translateY: ['-1rem','-1rem'],
-			opacity: [1,0],
-			easing: 'easeOutSine',
-			duration: 500
-		});
-		document.querySelector('.menu-main-container').classList.add('mobile-menu');
-		anime({
-			targets: '.menu-main-container',
-			height: [0,findHeight(document.querySelector('.menu-main-container').querySelector('.site-menu'))],
-			easing: 'easeOutSine',
-			duration: 1000
-		});
-	}
-})
+// 	} else {
+// 		menu.classList.add('is-active');
+// 		anime({
+// 			targets: '.bar-1',
+// 			translateY: ['-6.8rem','-5.75rem'],
+// 			rotate: '45deg',
+// 			duration: 600
+// 		});
+// 		anime({
+// 			targets: '.bar-2',
+// 			opacity: 0,
+// 			duration: 600
+// 		});
+// 		anime({
+// 			targets: '.bar-3',
+// 			translateY: ['-6.8rem','-7.5rem'],
+// 			rotate: '-45deg',
+// 			duration: 600
+// 		});
+// 		anime({
+// 			targets: '.close-btn',
+// 			translateX: [-50,0],
+// 			translateY: ['-3.7rem','-3.7rem'],
+// 			opacity: [0,1],
+// 			delay: 100,
+// 			easing: 'easeOutSine',
+// 			duration: 500
+// 		});
+// 		anime({
+// 			targets: '.menu-btn',
+// 			translateX: [0,50],
+// 			translateY: ['-1rem','-1rem'],
+// 			opacity: [1,0],
+// 			easing: 'easeOutSine',
+// 			duration: 500
+// 		});
+// 		document.querySelector('.menu-main-container').classList.add('mobile-menu');
+// 		anime({
+// 			targets: '.menu-main-container',
+// 			height: [0,findHeight(document.querySelector('.menu-main-container').querySelector('.site-menu'))],
+// 			easing: 'easeOutSine',
+// 			duration: 1000
+// 		});
+// 	}
+// })
 //finds the height of what an object should be based on its children
+
 function findHeight(item){
   var items = item.querySelectorAll('*');
   // return (30 * items);
@@ -187,7 +188,7 @@ function slideshow() {
         if(slideIndex == 1) {
                 nextSlide = 2;
         }                                                                                                                                                                                      
-                                                                                                                                                                                               
+		console.log(slides[slideIndex]);
         slides[slideIndex-1].style.display = 'block';
         slides[nextSlide-1].style.display = 'block';
         
