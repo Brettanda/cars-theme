@@ -225,7 +225,7 @@ main{
 		height: 100%;
 		width: 3rem;
 		left: calc(100% - 1rem);
-		@include transform(translatey(-70%));
+		transform: translatey(-70%);
 		z-index: -1;
 		position: absolute;
 	}
@@ -245,7 +245,7 @@ main{
 	right: -17px;
 	border-top-right-radius: 1rem;
 	border-top-left-radius: 1rem;
-	@include transform(rotate(-90deg));
+	transform: rotate(-90deg);
 
 	& button{
 		border: 0;
@@ -290,7 +290,7 @@ main{
 	height: 69px;
 	display: none;
 	margin: 0 auto;
-	@include transform(translateY(1rem));
+	transform: translateY(1rem);
 
 
 	@include break(sm){
@@ -299,14 +299,14 @@ main{
 	}
 }
 .bar-labels{
-	@include transform(translateX(-60px) translateY(-4px));
+	transform: translateX(-60px) translateY(-4px);
 }
 .bar{
 	width: 40px;
 	height: 3px;
 	background: black;
 	margin: 11px 5px;
-	@include transform(translateY(-6.8rem));
+	transform: translateY(-6.8rem);
 }
 .bar-menu__label{
 
@@ -315,7 +315,7 @@ main{
 	opacity: 0;
 }
 .menu-btn{
-	@include transform(translateY(-1rem));
+	transform: translateY(-1rem);
 }
 
 @include break(sm) {
@@ -373,7 +373,7 @@ main{
 	background-color: #EEE;
 
 	&:hover{
-		@include transform(scale(1.05));
+		transform: scale(1.05);
 		box-shadow: 0 0 30px rgba(16,14,23,.25);
 	}
 }
